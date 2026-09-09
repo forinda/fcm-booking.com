@@ -5,27 +5,6 @@ name: Stays
 locale: en-US
 currency: USD
 css: |
-  /* `.fx-card` sets `color: inherit; text-decoration: none` on the <article>,
-     but the block wraps its content in an <a> — so every card renders as a
-     block of underlined blue text. */
-  .fx-card > a { color: inherit; text-decoration: none }
-  .fx-card > a:hover h3 { text-decoration: underline }
-
-  /* Below `sm` the header nav is one scrollable row, not two wrapped lines —
-     the product tabs on booking.com's own phone layout do the same. Not a
-     hamburger: six links fit, and a disclosure needs a block that can render
-     `<details>`. */
-  @media (max-width: 479px) {
-    .fx-nav ul { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
-                 -webkit-overflow-scrolling: touch }
-    .fx-nav ul::-webkit-scrollbar { display: none }
-    .fx-nav li { flex: 0 0 auto }
-  }
-
-  /* `.fx-button` is inline-block, but a stack is a flex column whose default
-     `align-items: stretch` makes every button full width. */
-  .fx-stack > .fx-button, .fx-stack > .fx-form { align-self: flex-start }
-
   /* The search bar sits on the brand band and has to read against it. */
   .fx-filters { background: var(--color-background); color: var(--color-text);
                 padding: 0.75rem; border-radius: var(--radius-md) }
@@ -36,15 +15,6 @@ css: |
   .fx-row:has(.fx-facets) > .fx-stack:first-child { flex: 0 0 15rem }
   .fx-row:has(.fx-facets) > .fx-stack:last-child { flex: 1 1 22rem; min-width: 0 }
 
-  /* Results beside a rail are one wide column, where a full-bleed 3:2 photo is
-     600px tall. Booking.com's answer is a horizontal card. Block `css` cannot
-     hold this: it drops any selector containing `@`. */
-  @media (min-width: 48rem) {
-    .fx-row:has(.fx-facets) .fx-card > a { display: block }
-    .fx-row:has(.fx-facets) .fx-card > a::after { content: ""; display: block; clear: both }
-    .fx-row:has(.fx-facets) .fx-card img { float: left; width: 15rem; height: 11rem;
-                aspect-ratio: auto; max-width: none; margin: -1rem 1rem 0.5rem -1rem }
-  }
 theme:
   colors:
     brand: "#003580"
@@ -55,6 +25,9 @@ theme:
     background: "#ffffff"
   fonts: { body: Inter, heading: Inter }
   typeScale: { sm: 0.8125rem, md: 1rem, lg: 1.375rem, xl: 2rem }
+  # max-w-7xl. A booking site is a grid of photographs; 72rem left a column of
+  # empty page either side of it on any modern laptop.
+  widths: { container: 80rem }
   radius: { sm: 4px, md: 8px, lg: 12px }
 layout:
   header:
@@ -88,16 +61,19 @@ layout:
                       style: { variant: secondary }
                       css: "font-weight: 700"
                       attrs: { label: Sign in, to: /trips }
-            - type: nav
-              attrs:
-                label: Main
-                links:
-                  - { label: Stays, to: / }
-                  - { label: Search, to: /search }
-                  - { label: Deals, to: /deals }
-                  - { label: Awards, to: /awards }
-                  - { label: Your trips, to: /trips }
-                  - { label: Help, to: /help }
+            # `<details>` is the native disclosure: keyboard operable, its open
+            # state announced, Escape closes it, and it needs no script. The
+            # links stack vertically inside it rather than scrolling sideways.
+            - type: disclosure
+              style: { hideOn: [sm] }
+              css: "& > summary { padding: 0.35rem 0 } .fx-nav ul { flex-direction: column; gap: 0.6rem; padding: 0.5rem 0 0.25rem }"
+              attrs: { label: "\u2630 Menu" }
+              children:
+                - { type: component, attrs: { use: site-nav } }
+            - type: stack
+              style: { hideOn: [base] }
+              children:
+                - { type: component, attrs: { use: site-nav } }
   footer:
     # Booking.com's footer shape: a container-width grid of headed link columns
     # on the page's grey, then a full-bleed navy strip for the small print.
@@ -212,4 +188,20 @@ wiring:
     enabled: true
     config:
       instruction: Pay on arrival — the property takes cash or card.
-components: []
+components:
+  # The same six links on a phone and on a desktop. The wrapper carries the
+  # breakpoint; the component carries the list, so there is one place to add
+  # the seventh link.
+  - key: site-nav
+    label: Site navigation
+    blocks:
+      - type: nav
+        attrs:
+          label: Main
+          links:
+            - { label: Stays, to: / }
+            - { label: Search, to: /search }
+            - { label: Deals, to: /deals }
+            - { label: Awards, to: /awards }
+            - { label: Your trips, to: /trips }
+            - { label: Help, to: /help }

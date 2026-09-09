@@ -126,13 +126,13 @@ blocks:
       # Nothing is published by paying, and the amount is read from the row the
       # platform wrote rather than from this form.
       - type: form
-        attrs: { for: booking, submit: Reserve }
+        attrs: { for: booking, submitLabel: Reserve }
         children:
-          - { type: field, attrs: { for: booking, name: reference } }
-          - { type: field, attrs: { for: booking, name: room } }
-          - { type: field, attrs: { for: booking, name: checkIn } }
-          - { type: field, attrs: { for: booking, name: checkOut } }
-          - { type: field, attrs: { for: booking, name: guests } }
-          - { type: field, attrs: { for: booking, name: guestName } }
-          - { type: field, attrs: { for: booking, name: guestEmail } }
-          - { type: field, attrs: { for: booking, name: nights } }
+          - { type: field, attrs: { name: reference } }
+          - { type: field, attrs: { name: room } }
+          - { type: field, attrs: { name: checkIn } }
+          - { type: field, attrs: { name: checkOut } }
+          - { type: field, attrs: { name: guests } }
+          - { type: field, attrs: { name: guestName } }
+          - { type: field, attrs: { name: guestEmail } }
+          - { type: field, attrs: { name: nights } }
