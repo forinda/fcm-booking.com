@@ -1,6 +1,8 @@
 node_modules/
 media/
 .fcms/
+.ignored/
+.playwright-mcp/
 
 # `fcms.json` is NOT ignored: it names the server this directory publishes to,
 # holds no secret, and is the thing a second person needs to work here. The

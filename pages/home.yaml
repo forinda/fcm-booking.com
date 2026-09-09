@@ -44,6 +44,7 @@ blocks:
           - type: card
             style: { padding: md, radius: md, border: hairline }
             attrs:
+              image: "{{ item.photo }}"
               heading: "{{ item.name }}"
               body: "{{ item.blurb }}"
               meta: "{{ item.propertyCount }} properties"
@@ -73,6 +74,7 @@ blocks:
           - type: card
             style: { padding: md, radius: md, border: hairline }
             attrs:
+              image: "{{ item.photo }}"
               heading: "{{ item.name }}"
               body: "{{ item.blurb }}"
               meta: "{{ item.score }}/10 · from {{ item.priceFrom | currency }}"

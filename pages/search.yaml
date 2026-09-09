@@ -86,6 +86,7 @@ blocks:
                   - type: card
                     style: { padding: md, radius: md, border: hairline }
                     attrs:
+                      image: "{{ item.photo }}"
                       heading: "{{ item.name }}"
                       body: "{{ item.blurb }}"
                       meta: "{{ item.score }}/10 · {{ item.reviewCount }} reviews · from {{ item.priceFrom | currency }} a

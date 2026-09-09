@@ -1,0 +1,40 @@
+key: enquiry
+label: Enquiry
+labelPlural: Enquiries
+titleField: name
+publishable: false
+# `anyone`: a guest with a problem does not have an account yet, and a contact
+# form behind a sign-in is a contact form nobody uses. Declared here rather than
+# implied by the form block, so opening the type to public writes shows in the diff.
+submissions: anyone
+fields:
+  - name: name
+    label: Your name
+    type: text
+    required: true
+    unique: false
+    filterable: false
+  - name: email
+    label: Email address
+    type: email
+    required: true
+    unique: false
+    filterable: false
+  - name: subject
+    label: What is this about?
+    type: text
+    required: true
+    unique: false
+    filterable: true
+  - name: reference
+    label: Booking reference (if you have one)
+    type: text
+    required: false
+    unique: false
+    filterable: false
+  - name: message
+    label: Message
+    type: richtext
+    required: true
+    unique: false
+    filterable: false

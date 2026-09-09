@@ -1,0 +1,162 @@
+key: partner
+path: /partner
+title: List your property on Stays
+draft: false
+seo:
+  description: Put your hotel, apartment or guesthouse in front of guests booking East Africa. No listing fee.
+  noindex: false
+blocks:
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.brand
+    children:
+      - type: stack
+        style: { gap: md }
+        children:
+          - type: heading
+            style: { textColor: token:color.background, fontSize: xl }
+            attrs: { text: List your property on Stays, level: 1 }
+          - type: text
+            style: { textColor: token:color.background }
+            attrs:
+              text: "No listing fee, no exclusivity, no contract to exit. We take a commission on a stay that actually happened, and nothing on one that does not."
+  # Numbers a partner can check against the rest of the site rather than
+  # marketing arithmetic — the catalogue is right there on /search.
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+    children:
+      - type: grid
+        style: { gap: lg, cols: { base: 1, sm: 3 } }
+        children:
+          - type: stack
+            style: { gap: xs, padding: lg, background: token:color.surface, radius: md }
+            children:
+              - type: heading
+                style: { fontSize: xl, textColor: token:color.brand }
+                attrs: { text: "12", level: 2 }
+              - type: text
+                attrs: { text: "properties listed across five cities and four countries." }
+          - type: stack
+            style: { gap: xs, padding: lg, background: token:color.surface, radius: md }
+            children:
+              - type: heading
+                style: { fontSize: xl, textColor: token:color.brand }
+                attrs: { text: "0%", level: 2 }
+              - type: text
+                attrs: { text: "of search position is for sale. Ranking is guest score, and only guest score." }
+          - type: stack
+            style: { gap: xs, padding: lg, background: token:color.surface, radius: md }
+            children:
+              - type: heading
+                style: { fontSize: xl, textColor: token:color.brand }
+                attrs: { text: "1 day", level: 2 }
+              - type: text
+                attrs: { text: "to answer a partner message. A person, not a queue." }
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.surface
+    children:
+      - type: stack
+        style: { gap: lg }
+        children:
+          - type: heading
+            attrs: { text: How it works, level: 2 }
+          - type: grid
+            style: { gap: lg, cols: { base: 1, md: 3 } }
+            children:
+              - type: stack
+                style: { gap: xs }
+                children:
+                  - type: text
+                    style: { textColor: token:color.brand, fontWeight: bold, fontSize: lg }
+                    attrs: { text: "1" }
+                  - type: heading
+                    attrs: { text: Tell us about the place, level: 3 }
+                  - type: text
+                    attrs:
+                      text: "Rooms, address, photos and what is included. Send it in the form below — there is no application portal to learn."
+              - type: stack
+                style: { gap: xs }
+                children:
+                  - type: text
+                    style: { textColor: token:color.brand, fontWeight: bold, fontSize: lg }
+                    attrs: { text: "2" }
+                  - type: heading
+                    attrs: { text: We build the listing, level: 3 }
+                  - type: text
+                    attrs:
+                      text: "You check it before it goes live. Rates and availability stay yours to change at any time, and a change takes effect on the next search."
+              - type: stack
+                style: { gap: xs }
+                children:
+                  - type: text
+                    style: { textColor: token:color.brand, fontWeight: bold, fontSize: lg }
+                    attrs: { text: "3" }
+                  - type: heading
+                    attrs: { text: Guests arrive and pay you, level: 3 }
+                  - type: text
+                    attrs:
+                      text: "Most properties here take payment at the desk. We invoice commission monthly against stays that completed."
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+    children:
+      - type: grid
+        style: { gap: xl, cols: { base: 1, md: 2 } }
+        children:
+          - type: stack
+            style: { gap: md }
+            children:
+              - type: heading
+                attrs: { text: Tell us about your property, level: 2 }
+              - type: text
+                attrs:
+                  text: "Put the property name and city in the subject and we will come back with what we need."
+              - type: form
+                attrs: { for: enquiry, submitLabel: Send my property }
+                children:
+                  - { type: field, attrs: { name: name, label: Your name, required: true } }
+                  - type: field
+                    attrs: { name: email, label: Email address, type: email, required: true }
+                  - type: field
+                    attrs:
+                      name: subject
+                      label: "Property name and city"
+                      required: true
+                  - type: field
+                    attrs:
+                      name: message
+                      label: "How many rooms, and what should a guest know?"
+                      type: richtext
+                      required: true
+          - type: stack
+            style: { gap: md }
+            children:
+              - type: heading
+                attrs: { text: Already listed?, level: 2 }
+              - type: list
+                style: { gap: sm, cols: { base: 1 } }
+                data:
+                  from: article
+                  where:
+                    - field: category
+                      op: eq
+                      value: { param: category, default: company }
+                  sort:
+                    param: sort
+                    allow:
+                      - updated
+                      - title
+                    default: title
+                    dir: asc
+                  limit: 6
+                item:
+                  - type: card
+                    style: { padding: md, radius: md, border: hairline }
+                    attrs:
+                      heading: "{{ item.title }}"
+                      body: "{{ item.summary }}"
+                      to: "/info/{{ item.slug }}"

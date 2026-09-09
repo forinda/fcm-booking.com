@@ -1,0 +1,91 @@
+key: help
+path: /help
+title: Help centre
+draft: false
+seo:
+  description: Answers about bookings, payment, cancellations and safety — and a way to reach a person.
+  noindex: false
+blocks:
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.brand
+    children:
+      - type: stack
+        style: { gap: sm }
+        children:
+          - type: heading
+            style: { textColor: token:color.background, fontSize: xl }
+            attrs: { text: How can we help?, level: 1 }
+          - type: text
+            style: { textColor: token:color.background }
+            attrs: { text: "Search the answers, or pick a category." }
+          - type: filters
+            attrs: { for: article, submit: Search }
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+    children:
+      - type: row
+        style: { gap: lg }
+        children:
+          - type: stack
+            style: { gap: lg }
+            children:
+              - type: facets
+                attrs: { for: article, field: category, title: Category }
+          - type: stack
+            style: { gap: md }
+            children:
+              - type: results-count
+                attrs:
+                  for: article
+                  one: "{{ results.total }} answer"
+                  many: "{{ results.total }} answers"
+              # No `image` on these cards on purpose: only the travel articles
+              # have a photo, and a grid where half the cards carry one and half
+              # do not reads as a bug rather than a choice.
+              - type: list
+                style: { gap: md, cols: { base: 1, md: 2 } }
+                data:
+                  from: article
+                  where:
+                    - field: title
+                      op: contains
+                      value: { param: q }
+                    - field: category
+                      op: eq
+                      value: { param: category }
+                  sort:
+                    param: sort
+                    allow:
+                      - updated
+                      - title
+                    default: updated
+                    dir: desc
+                  limit: 12
+                item:
+                  - type: card
+                    style: { padding: md, radius: md, border: hairline }
+                    attrs:
+                      heading: "{{ item.title }}"
+                      body: "{{ item.summary }}"
+                      meta: "Updated {{ item.updated | date }}"
+                      to: "/info/{{ item.slug }}"
+              - type: pager
+                attrs: { for: article }
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.surface
+    children:
+      - type: stack
+        style: { gap: sm }
+        children:
+          - type: heading
+            attrs: { text: Nothing here answers it?, level: 2 }
+          - type: text
+            attrs:
+              text: Tell us what happened and give the booking reference if you have one.
+          - type: button
+            attrs: { label: Contact customer service, to: /contact }

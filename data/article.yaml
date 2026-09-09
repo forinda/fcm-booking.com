@@ -1,0 +1,280 @@
+# The pages behind the footer. One type, one template, nineteen rows — a page
+# per link would be nineteen near-identical YAML files and no way for an editor
+# to add the twentieth without a developer.
+- slug: staying-safe
+  title: Staying safe when you book
+  category: help
+  summary: How to tell a real listing from a bad one, and what to do if something looks wrong.
+  updated: 2026-07-14
+  body: |
+    <p>Every property on Stays is a row somebody had to publish, and every
+    review is attached to a stay that was actually paid for. That is most of
+    the safety story: there is no way to leave a review for a property you
+    never booked.</p>
+    <p>Pay through the property on arrival or through the reservation itself.
+    If a host asks you to send money by bank transfer, gift card or a payment
+    link outside Stays, stop and tell us — that request is the warning, not
+    the price.</p>
+    <p>Read the cancellation terms before you reserve. A stay marked free
+    cancellation can be cancelled without a charge up to the date shown on the
+    booking; one that is not says so on the same line.</p>
+- slug: cancelling-a-booking
+  title: Cancelling or changing a booking
+  category: help
+  summary: Where to find your reservation, and what changing the dates costs.
+  updated: 2026-08-02
+  body: |
+    <p>Open <a href="/trips">Your trips</a> and pick the booking. Everything
+    you can change is on that page: dates, guest count, and the room, subject
+    to what is free on the new dates.</p>
+    <p>If the stay is marked free cancellation, cancelling before the date on
+    the booking costs nothing. After that date, and on stays without free
+    cancellation, the property's own terms apply and are shown before you
+    confirm.</p>
+    <p>Changing dates is a new search against the same property, so a room that
+    was free last week may not be. The price you see when you confirm is the
+    price you pay.</p>
+- slug: paying-for-your-stay
+  title: Paying for your stay
+  category: help
+  summary: What you pay now, what you pay at the property, and in what currency.
+  updated: 2026-06-30
+  body: |
+    <p>Stays quotes in US dollars and every price is per night for the room,
+    not per person. The total on the room card is for the nights you searched.</p>
+    <p>Most properties here take payment on arrival — cash or card, at the
+    front desk. Reserving does not charge you. Where a property asks for a
+    deposit, the amount is read from the booking itself and shown before you
+    confirm.</p>
+    <p>Taxes and city levies vary by country and are collected by the property.
+    Ask at check-in if you need a receipt that separates them.</p>
+- slug: what-to-do-on-arrival
+  title: What to do when you arrive
+  category: help
+  summary: Check-in, late arrivals, and what to bring to the desk.
+  updated: 2026-05-19
+  body: |
+    <p>Bring the booking reference and the passport or ID you booked under.
+    The reference is on <a href="/trips">Your trips</a> and in the email the
+    property sent you.</p>
+    <p>Arriving after midnight, or before the check-in time on the booking?
+    Message the property the day before. Almost every property will hold a
+    room; almost none will guess that you are coming late.</p>
+- slug: privacy-and-cookies
+  title: Privacy and cookies
+  category: legal
+  summary: What Stays stores, why, and how to get rid of it.
+  updated: 2026-09-01
+  body: |
+    <p>Stays stores what a booking needs: the name and email you gave, the
+    dates and room you chose, and the reference the property reads at the
+    desk. Nothing on this site is sold to anybody.</p>
+    <p>Cookies here do two jobs — keeping you signed in, and remembering the
+    dates in the search box between pages. There is no advertising cookie and
+    no third-party tracker, so there is no consent banner to dismiss.</p>
+    <p>To see or delete what is held against your account, write to us from
+    the address you booked with: <a href="/contact">contact customer
+    service</a>. We answer data requests within 30 days.</p>
+- slug: terms-and-conditions
+  title: Terms and conditions
+  category: legal
+  summary: The agreement between you, the property, and Stays.
+  updated: 2026-09-01
+  body: |
+    <p>Stays is a marketplace. The contract for the room is between you and
+    the property; ours is for finding it, holding the reservation and passing
+    the details on accurately.</p>
+    <p>Prices, availability and cancellation terms come from the property and
+    are shown as given. Where a property's terms and this page disagree about
+    a specific stay, the property's terms govern that stay.</p>
+    <p>Reviews may be written by guests who completed a stay booked here, and
+    may be removed if they identify a member of staff or a guest by name.</p>
+- slug: partner-dispute
+  title: Partner dispute
+  category: legal
+  summary: How a property raises a complaint about a booking, a guest, or us.
+  updated: 2026-04-11
+  body: |
+    <p>Send the booking reference and what happened to <a
+    href="/contact">customer service</a> with "dispute" as the subject. We
+    reply within five working days with a case reference.</p>
+    <p>Disputes about damage or unpaid charges are between the property and
+    the guest, and Stays does not hold funds against either. What we can do is
+    give both sides the same record of what was booked and when.</p>
+- slug: modern-slavery-statement
+  title: Modern slavery statement
+  category: legal
+  summary: Our position and what we ask of properties listed here.
+  updated: 2026-02-28
+  body: |
+    <p>Stays does not tolerate forced labour, debt bondage or human
+    trafficking in its own operations or in the properties listed here.</p>
+    <p>Every property agrees, as a condition of listing, that its staff are
+    paid at or above the legal minimum in their country, hold their own
+    identity documents, and are free to leave employment on notice.</p>
+    <p>Credible reports are investigated and a property may be delisted while
+    that happens. Report a concern through <a href="/contact">customer
+    service</a>.</p>
+- slug: human-rights-statement
+  title: Human rights statement
+  category: legal
+  summary: The commitments we make, and where they bind partners.
+  updated: 2026-02-28
+  body: |
+    <p>We take the UN Guiding Principles on Business and Human Rights as the
+    floor, not the ceiling: properties are expected to treat guests and staff
+    without discrimination on race, nationality, religion, disability, gender
+    or sexuality.</p>
+    <p>A guest refused a booked room on any of those grounds should tell us.
+    We refund the stay ourselves and review the listing.</p>
+- slug: about-stays
+  title: About Stays
+  category: company
+  summary: A small marketplace for hotels, apartments and guesthouses in East Africa.
+  updated: 2026-08-20
+  photo: "https://images.unsplash.com/photo-1535338881181-3646e5ab2ee2?auto=format&fit=crop&w=1200&q=70"
+  photoAlt: "aerial photography of green mountains during daytime"
+  body: |
+    <p>Stays lists hotels, apartments, guesthouses, hostels and villas across
+    Kenya, Tanzania, Uganda and Rwanda. Every property is a real place with a
+    real address, and every room has a price you can see before you sign in.</p>
+    <p>We are deliberately small. A directory that covers four countries well
+    is more useful than one that covers forty badly, and it means somebody
+    here has actually been to most of what is listed.</p>
+- slug: how-we-work
+  title: How we work
+  category: company
+  summary: Where the prices come from, how ranking works, and what we take.
+  updated: 2026-08-20
+  body: |
+    <p>Properties set their own prices and their own availability. We do not
+    mark them up and we do not run a hidden auction for position.</p>
+    <p>The default order on <a href="/search">search</a> is guest score,
+    highest first, and you can sort by price or stars instead. Nothing on this
+    site is a paid placement — if that ever changes it will say so on the
+    card, not in a footnote.</p>
+    <p>We take a commission from the property on a completed stay. The guest
+    pays the price on the room card and nothing else to us.</p>
+- slug: sustainability
+  title: Sustainability
+  category: company
+  summary: What we ask of properties, and what we do not pretend to measure.
+  updated: 2026-03-15
+  photo: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1200&q=70"
+  photoAlt: "black and white solar panels"
+  body: |
+    <p>We do not award eco badges. Certification schemes vary so much between
+    these four countries that a single badge would say more about paperwork
+    than about a building.</p>
+    <p>What we do publish is concrete: whether a property runs on solar,
+    whether it refills water rather than selling plastic bottles, and whether
+    its staff are hired locally. Those are on the property page when the
+    property has told us.</p>
+- slug: press-centre
+  title: Press centre
+  category: company
+  summary: Contacts, numbers, and what we will and will not confirm.
+  updated: 2026-07-01
+  body: |
+    <p>For interviews, figures or images, write to <a href="/contact">customer
+    service</a> with "press" as the subject and a deadline. We answer within
+    two working days.</p>
+    <p>We confirm property counts, city coverage and aggregate guest scores.
+    We do not confirm booking volumes, revenue, or anything about an
+    individual guest or property.</p>
+- slug: careers
+  title: Careers
+  category: company
+  summary: How hiring here works, and what is open.
+  updated: 2026-09-05
+  photo: "https://images.unsplash.com/photo-1603201667141-5a2d4c673378?auto=format&fit=crop&w=1200&q=70"
+  photoAlt: "people sitting on chair in front of laptop computers"
+  body: |
+    <p>Openings are posted here and nowhere else, so this page is the whole
+    list. Right now we are looking for a support lead in Nairobi and a
+    part-time content editor who can write about the coast without using the
+    word "hidden gem".</p>
+    <p>The process is three conversations and one paid exercise. No panel of
+    nine, no whiteboard algorithm, and we tell you no quickly if it is no.</p>
+    <p>Write to <a href="/contact">customer service</a> with "careers" as the
+    subject and a link to something you made.</p>
+- slug: become-an-affiliate
+  title: Become an affiliate
+  category: company
+  summary: Link to Stays from your own site and earn on completed stays.
+  updated: 2026-06-12
+  body: |
+    <p>If you write about travel in East Africa, you can link to any search or
+    property page with your own tag and earn a share of our commission on
+    stays that complete.</p>
+    <p>There is no minimum traffic and no application form beyond telling us
+    where you publish. We pay monthly, on stays that actually happened —
+    cancellations do not count and neither do no-shows.</p>
+    <p>Ask for a tag through <a href="/contact">customer service</a> with
+    "affiliate" as the subject.</p>
+- slug: partner-help
+  title: Partner help
+  category: company
+  summary: For properties already listed — rates, availability, and getting paid.
+  updated: 2026-08-28
+  photo: "https://images.unsplash.com/photo-1759038085950-1234ca8f5fed?auto=format&fit=crop&w=1200&q=70"
+  photoAlt: "Hotel reception desk with modern wooden furniture and seating"
+  body: |
+    <p>Rates and availability are yours to change at any time and take effect
+    on the next search. A room with no availability loaded simply does not
+    appear; it is not penalised.</p>
+    <p>Commission is invoiced monthly against completed stays. A guest who
+    cancels under free cancellation is not a completed stay and is not
+    invoiced.</p>
+    <p>Something wrong with a booking, a guest, or the listing itself? <a
+    href="/contact">Tell us</a> with the booking reference. New here — <a
+    href="/partner">list your property</a>.</p>
+- slug: best-time-to-visit-zanzibar
+  title: The best time to visit Zanzibar
+  category: travel
+  summary: Two rainy seasons, two dry ones, and which one you actually want.
+  updated: 2026-05-02
+  photo: "https://images.unsplash.com/photo-1707296450219-2d9cc08bdef0?auto=format&fit=crop&w=1200&q=70"
+  photoAlt: "a boat sitting on top of a body of water"
+  body: |
+    <p>June to October is the long dry season and the reason most people come:
+    hot, low humidity, and the east coast breeze that makes the difference
+    between pleasant and unbearable.</p>
+    <p>The long rains run March to May. Prices in Stone Town drop by a third
+    and much of the east coast closes. If you want the island cheap and empty
+    and you do not mind an afternoon downpour, this is the window.</p>
+    <p>December to February is hot and dry again, and busy over the holidays.
+    Book the coast early or stay in <a href="/search?city=zanzibar">Stone
+    Town</a> and travel out by day.</p>
+- slug: getting-around-nairobi
+  title: Getting around Nairobi
+  category: travel
+  summary: Matatus, ride-hailing, and why the airport road decides your day.
+  updated: 2026-04-18
+  photo: "https://images.unsplash.com/photo-1656068218535-85db26125e13?auto=format&fit=crop&w=1200&q=70"
+  photoAlt: "a group of people walking down a street"
+  body: |
+    <p>Ride-hailing works everywhere in the city and is the simplest option
+    for a visitor. Agree the app price before you get in; a driver who wants
+    to renegotiate on arrival is a driver to decline.</p>
+    <p>Matatus are cheap, frequent and route-numbered rather than
+    timetabled. They are fine in daylight with a small bag and not much fun in
+    rush hour with luggage.</p>
+    <p>Mombasa Road between the airport and town is the one piece of
+    geography worth planning around: allow ninety minutes at rush hour for a
+    trip that takes twenty at six in the morning.</p>
+- slug: packing-for-the-coast
+  title: Packing for the coast
+  category: travel
+  summary: Short list. Most of what people bring stays in the bag.
+  updated: 2026-01-22
+  photo: "https://images.unsplash.com/photo-1502301197179-65228ab57f78?auto=format&fit=crop&w=1200&q=70"
+  photoAlt: "open suitcase with travel essentials and hat"
+  body: |
+    <p>Reef-safe sun cream, a long-sleeved cotton shirt for the middle of the
+    day, and something that covers the knees for Stone Town and Old Town —
+    both are Muslim towns and the shorts that are fine on the sand are not
+    fine in the market.</p>
+    <p>A plug adapter for Type G, a torch for the power cuts, and mosquito
+    repellent with DEET. Almost everything else you forget can be bought
+    within a block of wherever you are staying.</p>

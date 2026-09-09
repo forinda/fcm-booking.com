@@ -1,0 +1,93 @@
+key: contact
+path: /contact
+title: Contact customer service
+draft: false
+seo:
+  description: Send us a message about a booking, a property, or a partnership. A person answers.
+  noindex: false
+blocks:
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.brand
+    children:
+      - type: stack
+        style: { gap: sm }
+        children:
+          - type: heading
+            style: { textColor: token:color.background, fontSize: xl }
+            attrs: { text: Contact customer service, level: 1 }
+          - type: text
+            style: { textColor: token:color.background }
+            attrs:
+              text: "One form for everything — bookings, properties, press, partnerships. We answer within one working day."
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+    children:
+      - type: grid
+        style: { gap: xl, cols: { base: 1, md: 2 } }
+        children:
+          - type: stack
+            style: { gap: md }
+            children:
+              - type: heading
+                attrs: { text: Send a message, level: 2 }
+              # Fields are named explicitly rather than generated, so the labels
+              # read like questions and the booking reference can say it is
+              # optional without the type calling it that everywhere else.
+              - type: form
+                attrs: { for: enquiry, submitLabel: Send message }
+                children:
+                  - { type: field, attrs: { name: name, label: Your name, required: true } }
+                  - type: field
+                    attrs: { name: email, label: Email address, type: email, required: true }
+                  - type: field
+                    attrs:
+                      name: subject
+                      label: "What is this about? (booking, property, press, affiliate…)"
+                      required: true
+                  - type: field
+                    attrs:
+                      name: reference
+                      label: Booking reference, if you have one
+                  - type: field
+                    attrs: { name: message, label: What happened?, type: richtext, required: true }
+          - type: stack
+            style: { gap: md }
+            children:
+              - type: heading
+                attrs: { text: Faster than writing, level: 2 }
+              - type: text
+                attrs:
+                  text: "Most messages we get are one of these. The answer is already written."
+              - type: list
+                style: { gap: sm, cols: { base: 1 } }
+                data:
+                  from: article
+                  where:
+                    - field: category
+                      op: eq
+                      value: { param: category, default: help }
+                  sort:
+                    param: sort
+                    allow:
+                      - updated
+                      - title
+                    default: updated
+                    dir: desc
+                  limit: 6
+                item:
+                  - type: card
+                    style: { padding: md, radius: md, border: hairline }
+                    attrs:
+                      heading: "{{ item.title }}"
+                      body: "{{ item.summary }}"
+                      to: "/info/{{ item.slug }}"
+              - type: text
+                style: { fontSize: sm }
+                attrs:
+                  text: "Managing a booking you already made? Everything is on Your trips."
+              - type: button
+                style: { variant: outline }
+                attrs: { label: Go to Your trips, to: /trips }
