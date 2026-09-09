@@ -1,0 +1,19 @@
+{
+  "name": "fcms-booking",
+  "private": true,
+  "description": "booking.com, built on forinda-cms as a user would build it.",
+  "type": "module",
+  "scripts": {
+    "dev": "fcms dev",
+    "validate": "fcms validate",
+    "fmt": "fcms fmt",
+    "plan": "fcms plan",
+    "apply": "fcms apply",
+    "start": "forinda-cms"
+  },
+  "devDependencies": {
+    "@forinda/fcms-cli": "^2026.4.0",
+    "@forinda/fcms-core": "^2026.4.0",
+    "@forinda/fcms-mcp": "^2026.4.0"
+  }
+}

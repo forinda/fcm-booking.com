@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fcms": {
+      "command": "npx",
+      "args": ["-y", "@forinda/fcms-mcp"]
+    }
+  }
+}

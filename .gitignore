@@ -1,0 +1,7 @@
+node_modules/
+media/
+.fcms/
+
+# `fcms.json` is NOT ignored: it names the server this directory publishes to,
+# holds no secret, and is the thing a second person needs to work here. The
+# token lives in ~/.config/forinda-cms, 0600, and never in the repository.
