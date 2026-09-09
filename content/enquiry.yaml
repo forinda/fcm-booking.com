@@ -8,6 +8,22 @@ publishable: false
 # implied by the form block, so opening the type to public writes shows in the diff.
 submissions: anyone
 fields:
+  # A select renders as a select now, so the topic stops being a free-text box
+  # somebody has to read and route by hand.
+  - name: topic
+    label: What is this about?
+    type: select
+    required: true
+    unique: false
+    filterable: true
+    options:
+      - { value: booking, label: A booking I have made }
+      - { value: property, label: A property listed here }
+      - { value: list-a-property, label: Listing my property }
+      - { value: affiliate, label: The affiliate programme }
+      - { value: press, label: Press }
+      - { value: careers, label: Careers }
+      - { value: other, label: Something else }
   - name: name
     label: Your name
     type: text

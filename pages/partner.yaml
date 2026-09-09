@@ -8,6 +8,7 @@ seo:
 blocks:
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
       background: token:color.brand
     children:
@@ -21,10 +22,15 @@ blocks:
             style: { textColor: token:color.background }
             attrs:
               text: "No listing fee, no exclusivity, no contract to exit. We take a commission on a stay that actually happened, and nothing on one that does not."
+          - type: button
+            style: { variant: secondary }
+            css: "font-weight: 700"
+            attrs: { label: Start the conversation, to: "#list-your-property" }
   # Numbers a partner can check against the rest of the site rather than
   # marketing arithmetic — the catalogue is right there on /search.
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
     children:
       - type: grid
@@ -56,6 +62,7 @@ blocks:
                 attrs: { text: "to answer a partner message. A person, not a queue." }
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
       background: token:color.surface
     children:
@@ -101,7 +108,9 @@ blocks:
                     attrs:
                       text: "Most properties here take payment at the desk. We invoice commission monthly against stays that completed."
   - type: section
+    id: list-your-property
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
     children:
       - type: grid
@@ -118,20 +127,23 @@ blocks:
               - type: form
                 attrs: { for: enquiry, submitLabel: Send my property }
                 children:
-                  - { type: field, attrs: { name: name, label: Your name, required: true } }
+                  - { type: field, attrs: { for: enquiry, name: topic } }
                   - type: field
-                    attrs: { name: email, label: Email address, type: email, required: true }
+                    attrs: { for: enquiry, name: name, placeholder: "Amina Yusuf" }
+                  - type: field
+                    attrs: { for: enquiry, name: email, placeholder: "you@example.com" }
                   - type: field
                     attrs:
+                      for: enquiry
                       name: subject
-                      label: "Property name and city"
-                      required: true
+                      label: Property name and city
+                      placeholder: "Nyali Beach Hotel, Mombasa"
                   - type: field
                     attrs:
+                      for: enquiry
                       name: message
-                      label: "How many rooms, and what should a guest know?"
-                      type: richtext
-                      required: true
+                      label: How many rooms, and what should a guest know?
+                      placeholder: "Twelve rooms, all en-suite, breakfast included, ten minutes from the old town." 
           - type: stack
             style: { gap: md }
             children:

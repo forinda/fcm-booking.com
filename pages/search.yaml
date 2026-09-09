@@ -8,6 +8,7 @@ seo:
 blocks:
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: md }
       background: token:color.brand
     children:
@@ -15,6 +16,7 @@ blocks:
         attrs: { for: vacancy, submit: Search }
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: lg }
     children:
       - type: row
@@ -53,7 +55,7 @@ blocks:
                   where:
                     - field: stars
                       op: gte
-                      value: { param: stars }
+                      value: { param: stars, label: Stars from, placeholder: "Any rating" }
                     - field: kind
                       op: eq
                       value: { param: kind }
@@ -62,10 +64,10 @@ blocks:
                       value: { param: city }
                     - field: score
                       op: gte
-                      value: { param: score }
+                      value: { param: score, label: Guest score from, placeholder: "8.0" }
                     - field: priceFrom
                       op: lte
-                      value: { param: max_price }
+                      value: { param: max_price, label: Up to, placeholder: "Price a night" }
                     - field: freeCancellation
                       op: eq
                       value: { param: free_cancellation }
@@ -83,8 +85,10 @@ blocks:
                     dir: desc
                   limit: 25
                 item:
+                  # A wide single column would render a full-bleed 3:2 photo
+                  # 600px tall, so the photo floats and the text wraps beside it.
                   - type: card
-                    style: { padding: md, radius: md, border: hairline }
+                    style: { padding: md, radius: md, border: hairline, variant: price }
                     attrs:
                       image: "{{ item.photo }}"
                       heading: "{{ item.name }}"

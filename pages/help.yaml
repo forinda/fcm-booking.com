@@ -8,6 +8,7 @@ seo:
 blocks:
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
       background: token:color.brand
     children:
@@ -24,6 +25,7 @@ blocks:
             attrs: { for: article, submit: Search }
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
     children:
       - type: row
@@ -33,7 +35,7 @@ blocks:
             style: { gap: lg }
             children:
               - type: facets
-                attrs: { for: article, field: category, title: Category }
+                attrs: { for: article, field: category, title: Category, order: label }
           - type: stack
             style: { gap: md }
             children:
@@ -52,10 +54,10 @@ blocks:
                   where:
                     - field: title
                       op: contains
-                      value: { param: q }
+                      value: { param: q, label: Search the answers, placeholder: "cancel a booking" }
                     - field: category
                       op: eq
-                      value: { param: category }
+                      value: { param: category, label: Category }
                   sort:
                     param: sort
                     allow:
@@ -76,6 +78,7 @@ blocks:
                 attrs: { for: article }
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
       background: token:color.surface
     children:

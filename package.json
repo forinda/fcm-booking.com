@@ -12,8 +12,8 @@
     "start": "forinda-cms"
   },
   "devDependencies": {
-    "@forinda/fcms-cli": "^2026.5.0",
-    "@forinda/fcms-core": "^2026.5.0",
-    "@forinda/fcms-mcp": "^2026.5.0"
+    "@forinda/fcms-cli": "^2026.6.0",
+    "@forinda/fcms-core": "^2026.6.0",
+    "@forinda/fcms-mcp": "^2026.6.0"
   }
 }

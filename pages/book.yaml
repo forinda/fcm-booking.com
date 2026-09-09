@@ -55,7 +55,7 @@ flows:
 
 blocks:
   - type: section
-    style: { padding: { y: lg, x: lg } }
+    style: { padding: { y: lg, x: lg } , contentWidth: container }
     children:
       - type: heading
         attrs: { text: Book a stay, level: 1 }

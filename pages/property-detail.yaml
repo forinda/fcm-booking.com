@@ -7,6 +7,7 @@ seo: { description: "{{ entry.blurb }}", noindex: false }
 blocks:
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: lg }
     children:
       - type: heading
@@ -23,6 +24,7 @@ blocks:
         attrs: { src: "{{ entry.photo }}", alt: "{{ entry.name }}" }
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: lg }
     children:
       - type: heading
@@ -31,6 +33,7 @@ blocks:
         attrs: { html: "{{ entry.description }}" }
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: lg }
     children:
       - type: heading
@@ -39,6 +42,7 @@ blocks:
         attrs: { at: location, zoom: 15, title: "{{ entry.name }}" }
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: lg }
       background: token:color.surface
     children:
@@ -79,6 +83,7 @@ blocks:
               meta: "{{ item.total | currency }} for {{ item.nights }} nights"
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: lg }
     children:
       - type: heading
@@ -110,7 +115,7 @@ blocks:
               meta: "{{ item.score }}/10 · {{ item.author }}, {{ item.country }}"
 
   - type: section
-    style: { padding: { y: lg, x: lg }, background: token:color.surface }
+    style: { padding: { y: lg, x: lg }, background: token:color.surface , contentWidth: container }
     children:
       - type: heading
         attrs: { text: Reserve, level: 2 }
@@ -123,11 +128,11 @@ blocks:
       - type: form
         attrs: { for: booking, submit: Reserve }
         children:
-          - { type: field, attrs: { name: reference } }
-          - { type: field, attrs: { name: room } }
-          - { type: field, attrs: { name: checkIn } }
-          - { type: field, attrs: { name: checkOut } }
-          - { type: field, attrs: { name: guests } }
-          - { type: field, attrs: { name: guestName } }
-          - { type: field, attrs: { name: guestEmail } }
-          - { type: field, attrs: { name: nights } }
+          - { type: field, attrs: { for: booking, name: reference } }
+          - { type: field, attrs: { for: booking, name: room } }
+          - { type: field, attrs: { for: booking, name: checkIn } }
+          - { type: field, attrs: { for: booking, name: checkOut } }
+          - { type: field, attrs: { for: booking, name: guests } }
+          - { type: field, attrs: { for: booking, name: guestName } }
+          - { type: field, attrs: { for: booking, name: guestEmail } }
+          - { type: field, attrs: { for: booking, name: nights } }
