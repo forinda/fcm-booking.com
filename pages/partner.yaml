@@ -127,20 +127,18 @@ blocks:
               - type: form
                 attrs: { for: enquiry, submitLabel: Send my property }
                 children:
-                  - { type: field, attrs: { for: enquiry, name: topic } }
+                  - { type: field, attrs: { name: topic } }
                   - type: field
-                    attrs: { for: enquiry, name: name, placeholder: "Amina Yusuf" }
+                    attrs: { name: name, placeholder: "Amina Yusuf" }
                   - type: field
-                    attrs: { for: enquiry, name: email, placeholder: "you@example.com" }
+                    attrs: { name: email, placeholder: "you@example.com" }
                   - type: field
                     attrs:
-                      for: enquiry
                       name: subject
                       label: Property name and city
                       placeholder: "Nyali Beach Hotel, Mombasa"
                   - type: field
                     attrs:
-                      for: enquiry
                       name: message
                       label: How many rooms, and what should a guest know?
                       placeholder: "Twelve rooms, all en-suite, breakfast included, ten minutes from the old town." 

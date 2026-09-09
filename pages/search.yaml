@@ -88,6 +88,13 @@ blocks:
                   # A wide single column would render a full-bleed 3:2 photo
                   # 600px tall, so the photo floats and the text wraps beside it.
                   - type: card
+                    css: |
+                      @media (min-width: 48rem) {
+                        & > a { display: block }
+                        & > a::after { content: ""; display: block; clear: both }
+                        & img { float: left; width: 15rem; height: 11rem; aspect-ratio: auto;
+                                max-width: none; margin: -1rem 1rem 0.5rem -1rem }
+                      }
                     style: { padding: md, radius: md, border: hairline, variant: price }
                     attrs:
                       image: "{{ item.photo }}"

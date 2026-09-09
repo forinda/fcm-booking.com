@@ -40,21 +40,21 @@ blocks:
               # optional without the type calling it that everywhere else.
               - type: form
                 attrs: { for: enquiry, submitLabel: Send message }
-                # Type, label, required and the select's options all come from
-                # the declared field now; a page only says what it wants to
-                # override and what to hint inside the box.
+                # Type, label, required and the select's options come from the
+                # declared field, inherited from the form; a page says only what
+                # it overrides and what to hint inside the box.
                 children:
-                  - { type: field, attrs: { for: enquiry, name: topic } }
+                  - { type: field, attrs: { name: topic } }
                   - type: field
-                    attrs: { for: enquiry, name: name, placeholder: "Amina Yusuf" }
+                    attrs: { name: name, placeholder: "Amina Yusuf" }
                   - type: field
-                    attrs: { for: enquiry, name: email, placeholder: "you@example.com" }
+                    attrs: { name: email, placeholder: "you@example.com" }
                   - type: field
-                    attrs: { for: enquiry, name: subject, label: One line about it, placeholder: "Charged twice for one night" }
+                    attrs: { name: subject, label: One line about it, placeholder: "Charged twice for one night" }
                   - type: field
-                    attrs: { for: enquiry, name: reference, placeholder: "STY-4417" }
+                    attrs: { name: reference, placeholder: "STY-4417" }
                   - type: field
-                    attrs: { for: enquiry, name: message, label: What happened?, placeholder: "Dates, what you expected, what happened instead." }
+                    attrs: { name: message, label: What happened?, placeholder: "Dates, what you expected, what happened instead." }
           - type: stack
             style: { gap: md }
             children:
