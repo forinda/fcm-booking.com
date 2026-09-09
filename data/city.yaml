@@ -1,7 +1,7 @@
 # Five cities, chosen so the facet rail has a spread to count rather than one
 # obvious winner. Coordinates pasted from a map — nothing here geocodes.
-- { slug: nairobi, name: Nairobi, country: Kenya, blurb: "Green, high, and busy — the city everything in the region routes through.", location: { lat: -1.2864, lng: 36.8172 } }
-- { slug: mombasa, name: Mombasa, country: Kenya, blurb: "Old town, the ferry, and the beaches north and south of it.", location: { lat: -4.0435, lng: 39.6682 } }
-- { slug: zanzibar, name: Zanzibar, country: Tanzania, blurb: "Stone Town, then the east coast when you have had enough of it.", location: { lat: -6.1659, lng: 39.2026 } }
-- { slug: kampala, name: Kampala, country: Uganda, blurb: "Seven hills, and the lake at the bottom of them.", location: { lat: 0.3476, lng: 32.5825 } }
-- { slug: kigali, name: Kigali, country: Rwanda, blurb: "Clean, steep, and easier to get around than its size suggests.", location: { lat: -1.9441, lng: 30.0619 } }
+- { slug: nairobi, name: Nairobi, country: Kenya, blurb: "Green, high, and busy — the city everything in the region routes through.", photo: "https://images.unsplash.com/photo-1596005554384-d293674c91d7?auto=format&fit=crop&w=1200&q=70", location: { lat: -1.2864, lng: 36.8172 } }
+- { slug: mombasa, name: Mombasa, country: Kenya, blurb: "Old town, the ferry, and the beaches north and south of it.", photo: "https://images.unsplash.com/photo-1613455387592-cef6059ca088?auto=format&fit=crop&w=1200&q=70", location: { lat: -4.0435, lng: 39.6682 } }
+- { slug: zanzibar, name: Zanzibar, country: Tanzania, blurb: "Stone Town, then the east coast when you have had enough of it.", photo: "https://images.unsplash.com/photo-1621583628955-42fbc37bf424?auto=format&fit=crop&w=1200&q=70", location: { lat: -6.1659, lng: 39.2026 } }
+- { slug: kampala, name: Kampala, country: Uganda, blurb: "Seven hills, and the lake at the bottom of them.", photo: "https://images.unsplash.com/photo-1761681362862-529f82044bab?auto=format&fit=crop&w=1200&q=70", location: { lat: 0.3476, lng: 32.5825 } }
+- { slug: kigali, name: Kigali, country: Rwanda, blurb: "Clean, steep, and easier to get around than its size suggests.", photo: "https://images.unsplash.com/photo-1648708511872-5426c0f29c27?auto=format&fit=crop&w=1200&q=70", location: { lat: -1.9441, lng: 30.0619 } }

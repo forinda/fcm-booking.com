@@ -8,6 +8,7 @@
   blurb: "Business hotel in Westlands, ten minutes from the expressway."
   city: ref:city/nairobi
   address: "Westlands Road, Nairobi"
+  photo: "https://images.unsplash.com/photo-1665986127994-00f974136c7d?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -1.2649, lng: 36.8033 }
   stars: 4
   kind: hotel
@@ -19,6 +20,7 @@
   blurb: "Apartments with kitchens, by the week or by the night."
   city: ref:city/nairobi
   address: "Kilimani, Nairobi"
+  photo: "https://images.unsplash.com/photo-1770757587087-766db2874c21?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -1.2921, lng: 36.7833 }
   stars: 3
   kind: apartment
@@ -30,6 +32,7 @@
   blurb: "Six rooms in a garden, twenty minutes from the city when the road is kind."
   city: ref:city/nairobi
   address: "Karen, Nairobi"
+  photo: "https://images.unsplash.com/photo-1720706439286-a642d2cd0db2?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -1.3194, lng: 36.7073 }
   stars: 3
   kind: guesthouse
@@ -41,6 +44,7 @@
   blurb: "Dorms and a few private rooms, above a cafe."
   city: ref:city/nairobi
   address: "Westlands, Nairobi"
+  photo: "https://images.unsplash.com/photo-1709805619372-40de3f158e83?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -1.2673, lng: 36.8065 }
   stars: 1
   kind: hostel
@@ -52,6 +56,7 @@
   blurb: "On the sand, north of the old town."
   city: ref:city/mombasa
   address: "Nyali, Mombasa"
+  photo: "https://images.unsplash.com/photo-1563786728588-539feed7ed4b?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -4.0435, lng: 39.7011 }
   stars: 4
   kind: hotel
@@ -63,6 +68,7 @@
   blurb: "A whole house on the south coast, staff included."
   city: ref:city/mombasa
   address: "Diani Beach Road, Mombasa"
+  photo: "https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -4.2977, lng: 39.5772 }
   stars: 5
   kind: villa
@@ -74,6 +80,7 @@
   blurb: "Three rooms in a Swahili house, off the main street."
   city: ref:city/mombasa
   address: "Old Town, Mombasa"
+  photo: "https://images.unsplash.com/photo-1717916434761-e4b893794940?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -4.0619, lng: 39.6743 }
   stars: 2
   kind: guesthouse
@@ -85,6 +92,7 @@
   blurb: "A merchant's house with a roof terrace and a very steep stair."
   city: ref:city/zanzibar
   address: "Shangani, Stone Town"
+  photo: "https://images.unsplash.com/photo-1695643875095-f5620748605d?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -6.1627, lng: 39.1885 }
   stars: 4
   kind: hotel
@@ -96,6 +104,7 @@
   blurb: "Bandas on the east coast, kitesurfing next door."
   city: ref:city/zanzibar
   address: "Paje, Zanzibar"
+  photo: "https://images.unsplash.com/photo-1620896712848-d05411ec91ec?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -6.2661, lng: 39.5386 }
   stars: 3
   kind: guesthouse
@@ -107,6 +116,7 @@
   blurb: "Apartments on the hill, with the city below."
   city: ref:city/kampala
   address: "Kololo, Kampala"
+  photo: "https://images.unsplash.com/photo-1675756261486-09bd1e0f6c8a?auto=format&fit=crop&w=1200&q=70"
   location: { lat: 0.3345, lng: 32.5906 }
   stars: 4
   kind: apartment
@@ -118,6 +128,7 @@
   blurb: "Ten minutes from departures, for the early flight."
   city: ref:city/kampala
   address: "Entebbe Road, Kampala"
+  photo: "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?auto=format&fit=crop&w=1200&q=70"
   location: { lat: 0.0512, lng: 32.4633 }
   stars: 3
   kind: hotel
@@ -129,6 +140,7 @@
   blurb: "Quiet rooms in Nyarutarama, walking distance to nothing and that is the point."
   city: ref:city/kigali
   address: "Nyarutarama, Kigali"
+  photo: "https://images.unsplash.com/photo-1687986261123-b17f08f2796c?auto=format&fit=crop&w=1200&q=70"
   location: { lat: -1.9355, lng: 30.1077 }
   stars: 4
   kind: hotel

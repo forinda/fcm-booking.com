@@ -1,0 +1,60 @@
+key: article
+label: Article
+labelPlural: Articles
+titleField: title
+publishable: true
+permalink: "/info/{{ entry.slug }}"
+jsonld:
+  type: Article
+  properties: { name: title, description: summary }
+fields:
+  # Filterable because the help centre searches it — `contains` needs an index,
+  # and the spec refuses a parameter filter on a field that has none.
+  - name: title
+    label: Title
+    type: text
+    required: true
+    unique: false
+    filterable: true
+  - name: category
+    label: Category
+    type: select
+    required: true
+    unique: false
+    filterable: true
+    options:
+      - { value: help, label: Help }
+      - { value: legal, label: Terms and settings }
+      - { value: company, label: About Stays }
+      - { value: travel, label: Travel }
+  - name: summary
+    label: Summary
+    type: text
+    required: false
+    unique: false
+    filterable: false
+  - name: body
+    label: Body
+    type: richtext
+    required: false
+    unique: false
+    filterable: false
+  - name: updated
+    label: Last updated
+    type: date
+    required: false
+    unique: false
+    filterable: true
+  - name: photo
+    label: Hero photo
+    type: asset
+    required: false
+    unique: false
+    filterable: false
+    accept: image
+  - name: photoAlt
+    label: Photo description
+    type: text
+    required: false
+    unique: false
+    filterable: false

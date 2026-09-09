@@ -1,0 +1,83 @@
+key: awards
+path: /awards
+title: Traveller Review Awards
+draft: false
+seo:
+  description: The properties on Stays that guests scored 9 or better.
+  noindex: false
+blocks:
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.brand
+    children:
+      - type: stack
+        style: { gap: sm }
+        children:
+          - type: text
+            style: { textColor: token:color.accent, fontWeight: bold, fontSize: sm }
+            attrs: { text: "2026" }
+          - type: heading
+            style: { textColor: token:color.background, fontSize: xl }
+            attrs: { text: Traveller Review Awards, level: 1 }
+          - type: text
+            style: { textColor: token:color.background }
+            attrs:
+              text: "No panel and no shortlist. A property is here because guests who stayed scored it 9 or better."
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+    children:
+      - type: stack
+        style: { gap: md }
+        children:
+          - type: results-count
+            attrs:
+              for: property
+              one: "{{ results.total }} winner this year"
+              many: "{{ results.total }} winners this year"
+          - type: list
+            style: { gap: lg, cols: { base: 1, md: 3 } }
+            data:
+              from: property
+              where:
+                - field: score
+                  op: gte
+                  value: { param: score, default: 9 }
+                - field: city
+                  op: eq
+                  value: { param: city }
+              sort:
+                param: sort
+                allow:
+                  - score
+                  - reviewCount
+                  - priceFrom
+                default: score
+                dir: desc
+              limit: 12
+            item:
+              - type: card
+                style: { padding: md, radius: md, border: hairline }
+                attrs:
+                  image: "{{ item.photo }}"
+                  heading: "{{ item.name }}"
+                  body: "{{ item.blurb }}"
+                  meta: "{{ item.score }}/10 · {{ item.reviewCount }} reviews"
+                  to: "/stay/{{ item.slug }}"
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.surface
+    children:
+      - type: stack
+        style: { gap: sm }
+        children:
+          - type: heading
+            attrs: { text: How a score is made, level: 2 }
+          - type: text
+            attrs:
+              text: "Only a guest who completed a stay booked here can review it, and the score is the plain average of those reviews — nothing is weighted and nothing is bought."
+          - type: button
+            style: { variant: outline }
+            attrs: { label: How we work, to: /info/how-we-work }

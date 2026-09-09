@@ -1,0 +1,63 @@
+key: article
+path: /info
+title: "{{ entry.title }}"
+collection: { from: article }
+draft: false
+seo: { description: "{{ entry.summary }}", noindex: false }
+blocks:
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.brand
+    children:
+      - type: stack
+        style: { width: narrow, gap: sm }
+        children:
+          - type: text
+            style: { textColor: token:color.accent, fontWeight: bold, fontSize: sm }
+            attrs: { text: "{{ entry.category }}" }
+          - type: heading
+            style: { textColor: token:color.background, fontSize: xl }
+            attrs: { text: "{{ entry.title }}", level: 1 }
+          - type: text
+            style: { textColor: token:color.background }
+            attrs: { text: "{{ entry.summary }}" }
+          - type: text
+            style: { textColor: token:color.background, fontSize: sm }
+            attrs: { text: "Last updated {{ entry.updated | date }}" }
+  # `narrow` is 42rem — a measure you can read a legal page in. The rest of the
+  # site is `container`; prose is the one place that wants less.
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+    children:
+      - type: stack
+        style: { width: narrow, gap: md }
+        children:
+          - type: image
+            when: { field: entry.photo, op: contains, value: "https" }
+            style: { radius: md }
+            attrs: { src: "{{ entry.photo }}", alt: "{{ entry.photoAlt }}" }
+          - type: richtext
+            attrs: { html: "{{ entry.body }}" }
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.surface
+    children:
+      - type: stack
+        style: { width: narrow, gap: sm }
+        children:
+          - type: heading
+            attrs: { text: Still need a hand?, level: 2 }
+          - type: text
+            attrs:
+              text: A person reads every message, and we answer within one working day.
+          - type: row
+            style: { gap: sm }
+            children:
+              - type: button
+                attrs: { label: Contact customer service, to: /contact }
+              - type: button
+                style: { variant: outline }
+                attrs: { label: Browse the help centre, to: /help }

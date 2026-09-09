@@ -1,0 +1,81 @@
+key: deals
+path: /deals
+title: Seasonal deals
+draft: false
+seo:
+  description: The cheapest rooms on Stays that can still be cancelled for free.
+  noindex: false
+blocks:
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.brand
+    children:
+      - type: stack
+        style: { gap: sm }
+        children:
+          - type: heading
+            style: { textColor: token:color.background, fontSize: xl }
+            attrs: { text: Seasonal deals, level: 1 }
+          - type: text
+            style: { textColor: token:color.background }
+            attrs:
+              text: "Lowest nightly rate first, and every one of these can be cancelled for free."
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+    children:
+      - type: stack
+        style: { gap: md }
+        children:
+          - type: results-count
+            attrs:
+              for: property
+              one: "{{ results.total }} property with a free-cancellation rate"
+              many: "{{ results.total }} properties with a free-cancellation rate"
+          - type: list
+            style: { gap: lg, cols: { base: 1, md: 3 } }
+            data:
+              from: property
+              where:
+                # Fixed, not a parameter: this page *is* the free-cancellation
+                # cut of the catalogue. A visitor who wants the rest has /search.
+                - field: freeCancellation
+                  op: eq
+                  value: true
+                - field: city
+                  op: eq
+                  value: { param: city }
+              sort:
+                param: sort
+                allow:
+                  - priceFrom
+                  - score
+                  - stars
+                default: priceFrom
+                dir: asc
+              limit: 12
+            item:
+              - type: card
+                style: { padding: md, radius: md, border: hairline }
+                attrs:
+                  image: "{{ item.photo }}"
+                  heading: "{{ item.name }}"
+                  body: "{{ item.blurb }}"
+                  meta: "{{ item.score }}/10 · from {{ item.priceFrom | currency }} a night"
+                  to: "/stay/{{ item.slug }}"
+  - type: section
+    style:
+      padding: { x: lg, y: xl }
+      background: token:color.surface
+    children:
+      - type: stack
+        style: { gap: sm }
+        children:
+          - type: heading
+            attrs: { text: Want the whole catalogue?, level: 2 }
+          - type: text
+            attrs:
+              text: "Search filters by city, star rating, price and what is included."
+          - type: button
+            attrs: { label: Search all stays, to: /search }
