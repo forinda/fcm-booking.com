@@ -5,7 +5,7 @@ seo:
   description: The bookings you have made, and nobody else's.
 blocks:
   - type: section
-    style: { padding: { y: lg, x: lg } }
+    style: { padding: { y: lg, x: lg }, contentWidth: container }
     children:
       - type: heading
         attrs: { text: Your trips, level: 1 }
@@ -15,7 +15,7 @@ blocks:
       - type: account
 
   - type: section
-    style: { padding: { y: lg, x: lg } }
+    style: { padding: { y: lg, x: lg }, contentWidth: container }
     children:
       - type: list
         style: { cols: { base: 1, md: 2 }, gap: md }

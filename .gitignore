@@ -3,6 +3,7 @@ media/
 .fcms/
 .ignored/
 .playwright-mcp/
+.env
 
 # `fcms.json` is NOT ignored: it names the server this directory publishes to,
 # holds no secret, and is the thing a second person needs to work here. The

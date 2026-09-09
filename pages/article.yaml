@@ -7,11 +7,12 @@ seo: { description: "{{ entry.summary }}", noindex: false }
 blocks:
   - type: section
     style:
+      contentWidth: narrow
       padding: { x: lg, y: xl }
       background: token:color.brand
     children:
       - type: stack
-        style: { width: narrow, gap: sm }
+        style: { gap: sm }
         children:
           - type: text
             style: { textColor: token:color.accent, fontWeight: bold, fontSize: sm }
@@ -29,24 +30,26 @@ blocks:
   # site is `container`; prose is the one place that wants less.
   - type: section
     style:
+      contentWidth: narrow
       padding: { x: lg, y: xl }
     children:
       - type: stack
-        style: { width: narrow, gap: md }
+        style: { gap: md }
         children:
           - type: image
-            when: { field: entry.photo, op: contains, value: "https" }
+            when: { field: entry.photo, op: exists }
             style: { radius: md }
             attrs: { src: "{{ entry.photo }}", alt: "{{ entry.photoAlt }}" }
           - type: richtext
             attrs: { html: "{{ entry.body }}" }
   - type: section
     style:
+      contentWidth: narrow
       padding: { x: lg, y: xl }
       background: token:color.surface
     children:
       - type: stack
-        style: { width: narrow, gap: sm }
+        style: { gap: sm }
         children:
           - type: heading
             attrs: { text: Still need a hand?, level: 2 }

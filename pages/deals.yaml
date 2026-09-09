@@ -8,6 +8,7 @@ seo:
 blocks:
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
       background: token:color.brand
     children:
@@ -23,6 +24,7 @@ blocks:
               text: "Lowest nightly rate first, and every one of these can be cancelled for free."
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
     children:
       - type: stack
@@ -57,7 +59,7 @@ blocks:
               limit: 12
             item:
               - type: card
-                style: { padding: md, radius: md, border: hairline }
+                style: { padding: md, radius: md, border: hairline, variant: price }
                 attrs:
                   image: "{{ item.photo }}"
                   heading: "{{ item.name }}"
@@ -66,6 +68,7 @@ blocks:
                   to: "/stay/{{ item.slug }}"
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
       background: token:color.surface
     children:

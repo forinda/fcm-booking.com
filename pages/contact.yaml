@@ -8,6 +8,7 @@ seo:
 blocks:
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
       background: token:color.brand
     children:
@@ -23,6 +24,7 @@ blocks:
               text: "One form for everything — bookings, properties, press, partnerships. We answer within one working day."
   - type: section
     style:
+      contentWidth: container
       padding: { x: lg, y: xl }
     children:
       - type: grid
@@ -38,21 +40,21 @@ blocks:
               # optional without the type calling it that everywhere else.
               - type: form
                 attrs: { for: enquiry, submitLabel: Send message }
+                # Type, label, required and the select's options all come from
+                # the declared field now; a page only says what it wants to
+                # override and what to hint inside the box.
                 children:
-                  - { type: field, attrs: { name: name, label: Your name, required: true } }
+                  - { type: field, attrs: { for: enquiry, name: topic } }
                   - type: field
-                    attrs: { name: email, label: Email address, type: email, required: true }
+                    attrs: { for: enquiry, name: name, placeholder: "Amina Yusuf" }
                   - type: field
-                    attrs:
-                      name: subject
-                      label: "What is this about? (booking, property, press, affiliate…)"
-                      required: true
+                    attrs: { for: enquiry, name: email, placeholder: "you@example.com" }
                   - type: field
-                    attrs:
-                      name: reference
-                      label: Booking reference, if you have one
+                    attrs: { for: enquiry, name: subject, label: One line about it, placeholder: "Charged twice for one night" }
                   - type: field
-                    attrs: { name: message, label: What happened?, type: richtext, required: true }
+                    attrs: { for: enquiry, name: reference, placeholder: "STY-4417" }
+                  - type: field
+                    attrs: { for: enquiry, name: message, label: What happened?, placeholder: "Dates, what you expected, what happened instead." }
           - type: stack
             style: { gap: md }
             children:
