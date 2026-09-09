@@ -25,6 +25,9 @@ theme:
     background: "#ffffff"
   fonts: { body: Inter, heading: Inter }
   typeScale: { sm: 0.8125rem, md: 1rem, lg: 1.375rem, xl: 2rem }
+  # max-w-7xl. A booking site is a grid of photographs; 72rem left a column of
+  # empty page either side of it on any modern laptop.
+  widths: { container: 80rem }
   radius: { sm: 4px, md: 8px, lg: 12px }
 layout:
   header:
